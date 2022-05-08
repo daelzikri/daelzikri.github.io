@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.showcase { width: 100%;
+height: 120px;
+position: relative;
+font-weight:bold;
+}
+.showcase video {
+    width: 100%;
+height: 100%;
+position: absolute; top: 0;
+left: 0;
+object-fit: cover;}
+
+.title {
+
+width: 100%;
+
+height: 100%; font-size: 50px; color: #fff;
+
+background-color: black;
+mix-blend-mode: multiply;}
+.judul {
+     background-image: linear-gradient(-1deg,#000080,red);
+     -webkit-background-clip:text;
+     color:transparent;
+     font-weight: bold;
+}
+.baru{
+    background-image: linear-gradient(-2deg,#44533f,green);
+     -webkit-background-clip:text;
+     color:transparent;
+     font-weight: bold;
+}
+
+ section {
+     background-color:transparent;
+ }
+.isi{
+    color:white;
+    margin-left: ;
+    margin right:4px;
+}
+.teks{
+    font-size: 17px;
+    color:white;
+}
+
+.button.dark-single {
+--background: none;
+--rectangle: #0000ff;
+--success: #4bc793; } 
+
+.button.white-single {
+--background: none;
+--rectangle: #f5f9ff;
+--arrow: #275efe;
+--success: #275efe;
+--shadow: rgba(10, 22, 50, .1);}
+
+.button.dark {
+--background: #0000ff;
+--rectangle: red;
+--arrow: blue;
+--text: red;
+--success: red;
+left:50%;
+}
+
+.button {
+--background: #275efe;
+--rectangle: #184fee;
+--success: #4672f1;
+--text: #fff;
+--arrow: #fff;
+--checkmark: #fff;
+--shadow: rgba(10, 22, 50, .24);
+display: flex;
+width:50%;
+overflow: hidden;
+text-decoration: none; -webkit-mask-image:-webkit-radial gradient (white, black);
+background: var( --background);
+border-radius: 8px;
+box-shadow: 2px 8px -1px var(--shadow);
+transition: transform 0.2s ease, box-shadow 0.2s
+ease;
+}
+
+
+.button:active {
+transform: scale(0.95); box-shadow: 0 1px 4px -1px var(--shadow);}
+
+.button ul {
+margin: 0;
+padding: 16px 17%;
+list-style: none;
+text-align: center; position: relative;
+backface-visibility: hidden;
+font-size: 16px;
+font-weight: 500;
+line-height: 28px; color: var(--text);}
+
+.button ul li:not(:first-child) {
+top: 16px;
+left: 0;
+right: 0;
+position: absolute;
+}
+
+.button ul li:nth-child(2) {
+top: 76px;}
+
+.button ul li:nth-child(3) {
+top: 136px;}
+
+.button > div {
+position: relative;
+width: 60px;
+height: 60px;
+background: var(--rectangle);
+}
+
+.button > div:before, .button > div:after {
+content: '';
+display: block;
+position: absolute;}
+
+.button > div:before {
+border-radius: 1px;
+width: 2px;
+top: 50%;
+left: 50%;
+height: 17px;
+margin: -9px 0 0 -1px;
+background: var(--arrow);}
+
+.button > div:after {
+width: 60px;
+height: 60px; background: var(--success);
+transform-origin: 50% 0;
+border-radius: 0 0 80% 80%;
+top: 0;
+left: 0; transform: scaleY(0);} 
+
+.button > div svg {
+display: block;
+position: absolute;
+width: 20px;
+height: 20px;
+left: 50%;
+top: 50%;
+margin: -9px 0 0 -10px;
+fill: none;
+z-index: 1;
+stroke-width: 2px;
+stroke: var(--arrow);
+stroke-linecap: round; stroke-linejoin: round;}
+
+
+.button.loading ul {
+animation: text calc(var(--duration) 1ms) linear forwards calc(var(--duration) * .065ms);
+}
+
+.button.loading > div:before {
+animation: line calc(var(--duration) 1ms)
+linear forwards calc(var(--duration) .065ms);
+}
+
+.button.loading > div:after {
+animation: background calc(var(--duration) 1ms) linear forwards calc(var (--duration) * .065ms);
+}
+
+.button.loading > div svg {
+animation: svg calc(var(--duration) 1ms)
+linear forwards calc(var(--duration) *.065ms);
+}
+
+@keyframes text {
+10%, 85% {
+transform: translateY(-100%);
+}
+
+  95%, 100% {
+transform: translateY(-200%);
+}
+
+}
+
+.wrapper {
+display: flex;
+justify-content: center;
+align-content: center;
+margin-top: 50vh;
+}
+
+.wrapper .icon { 
+    border-radius: 50%; 
+    justify-content: center;
+position: relative;
+padding: 15px;
+margin: 10px;
+width: 50px;
+height: 50px;
+font-size: 18px;
+display: flex;
+align-items: center;
+flex-direction: column;
+cursor: pointer;
+color:blue;
+}
+
+.wrapper .icon i {
+color: white;
+transition: .4s linear;
+}
+
+.wrapper .icon::before,
+.wrapper .icon::after { content: '';
+position: absolute;
+box-sizing: border-box;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+transition: .4s linear;
+}
+
+.wrapper .icon:hover::before {
+border-radius: 50%;
+border-left: 4px solid;
+border-right: 4px solid; 
+color: red;
+transform: skewX (20deg);
+}
+
+.wrapper .icon:hover::after {
+    border-radius: 50%;
+border-top: 4px solid;
+border-bottom: 4px solid;
+transform: skewY(-20deg);
+color: blue;
+}
+
+.wrapper .tooltip { 
+    position: absolute;
+top: 0;
+font-size: 14px;
+color: #ffffff;
+padding: 5px 8px;
+border-radius: 5px;
+box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+opacity: 0;
+pointer-events: none;
+transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+top: -45px;
+opacity: 1;
+visibility: visible;
+pointer-events: auto;
+}
+
+
+.we{display:grid;
+place-items: center;
+}
+     .outer{  
+ width:180px;  
+ height:60px;  
+ border-radius:10px;  
+ padding:5px;  
+      }  
+     .outer:hover{  
+       animation-name:rotate;  
+       animation-iteration-count:infinite;  
+       animation-duration:1s;  
+       animation-delay: 0ms;  
+       background-color: rgb(23, 248, 248);  
+     }  
+     .outer:hover a{  
+       color:aqua;  
+     }  
+     
+     
+          .hei{  
+ width:150px;  
+ height:60px;  
+ border-radius:10px;  
+ padding:5px;  
+      }  
+     .hei:hover{  
+       animation-name:rotate;  
+       animation-iteration-count:infinite;  
+       animation-duration:1s;  
+       animation-delay: 0ms;  
+       background-color: rgb(23, 248, 248);  
+     }  
+     .hei:hover a{  
+       color:aqua;  
+     }  
+     
+               .HEHEHE{  
+ width:350px;  
+ height:60px;  
+ border-radius:10px;  
+ padding:5px;  
+      }  
+     .HEHEHE:hover{  
+       animation-name:rotate;  
+       animation-iteration-count:infinite;  
+       animation-duration:1s;  
+       animation-delay: 0ms;  
+       background-color: rgb(23, 248, 248);  
+     }  
+     .HEHEHE:hover a{  
+       color:aqua;  
+     }  
+     
+     
+     
+     
+     
+     
+     
+     
+      @keyframes rotate {  
+   from{  
+     filter: hue-rotate(0deg);  
+   }  
+   to{  
+     filter:hue-rotate(360deg);  
+   }  
+ }  
+     .inner{  
+       width:100%;  
+       height:100%;  
+       display:flex;  
+       justify-content: center;  
+       align-items:center;  
+       background-color: blue;  
+       border-radius:10px;  
+     }  
+     a{  
+        background-image: linear-gradient(-1deg,#000080,red);
+     -webkit-background-clip:text;
+     color:transparent;
+       text-decoration:none;  
+       font-weight: 900;  
+       font-size:25px;  
+     }  
+    .hay {
+         background-image: linear-gradient(-1deg,#000080,red);
+     -webkit-background-clip:text;
+     color:transparent;
+     }
